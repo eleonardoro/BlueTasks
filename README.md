@@ -62,9 +62,9 @@ This project was developed for learning purposes with the following technologies
 ## :page_facing_up: Improve
 
 Use it? Like it? Want to improve it? Here go some ideas:
- :heavy_check_mark: change tab icon on navigator;
- :heavy_check_mark: internationalization;
- :heavy_check_mark: Add filter and ordering.
+ - :heavy_check_mark: change tab icon on navigator;
+ - :heavy_check_mark: internationalization;
+ - :heavy_check_mark: Add filter and ordering.
 
 
 ## :memo: License
