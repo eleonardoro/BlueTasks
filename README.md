@@ -21,7 +21,6 @@
 
 <p align="center">
     <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#page_facing_up-improve">Improve</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="#memo-license">License</a>
 </p>
@@ -53,37 +52,19 @@ This project was developed for learning purposes with the following technologies
 - [H2 Database](https://www.h2database.com/html/main.html)
 - [Lombok](https://projectlombok.org/)
 - [VS Code][vc]
-- [VS Code][vc]
+- [npm][npm]
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Tools](https://spring.io/tools)
+- [Eclipse IDE for Java EE Developers](https://github.com/eleonardoro/BlueFood-Java/blob/master/ecl)
 
 
-## :information_source: How To Use
-
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v12.16.2][nodejs] or higher + [Npm
-v6.14.4][npm] or higher installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/eleonardoro/train-chords train-chords
-
-# Go into the repository
-$ cd train-chords
-
-# Install dependencies
-$ npm i
-
-# Run the app
-$ npm run start
-
-```
 
 ## :page_facing_up: Improve
 
 Use it? Like it? Want to improve it? Here go some ideas:
-- :heavy_check_mark: Change Chords of Text to cards that flip
-- :heavy_check_mark: Add option to show the image of Chords: Never | Ever | After some time (should check if not bigger than time to change :eyes:)
-- :heavy_check_mark: General time counter 
-- :heavy_check_mark: Countdown timer for next Chord change
-- :heavy_check_mark: imagem ds acordes
+- :heavy_check_mark: change tab icon on navigator;
+- :heavy_check_mark: internationalization;
+- :heavy_check_mark: Add filter and ordering.
 
 
 ## :memo: License
