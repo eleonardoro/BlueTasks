@@ -41,13 +41,13 @@ This project was developed for learning purposes with the following technologies
 - [React Moment](https://www.npmjs.com/package/react-moment)
 - [React Router](https://reactrouter.com/)
 - [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
-- [Spring Boot Rest]
-- [Spring Boot Web]
-- [Spring Boot Validation]
-- [Spring Boot JPA]
-- [Spring Boot Security]
-- [Spring Boot Devtools]
-- [Spring Boot Test]()
+- Spring Boot Rest
+- Spring Boot Web
+- Spring Boot Validation
+- Spring Boot JPA
+- Spring Boot Security
+- Spring Boot Devtools
+- Spring Boot Test
 - [jjwt](https://github.com/jwtk/jjwt)
 - [H2 Database](https://www.h2database.com/html/main.html)
 - [Lombok](https://projectlombok.org/)
@@ -62,9 +62,9 @@ This project was developed for learning purposes with the following technologies
 ## :page_facing_up: Improve
 
 Use it? Like it? Want to improve it? Here go some ideas:
-- :heavy_check_mark: change tab icon on navigator;
-- :heavy_check_mark: internationalization;
-- :heavy_check_mark: Add filter and ordering.
+ :heavy_check_mark: change tab icon on navigator;
+ :heavy_check_mark: internationalization;
+ :heavy_check_mark: Add filter and ordering.
 
 
 ## :memo: License
