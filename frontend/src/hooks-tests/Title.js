@@ -1,17 +1,13 @@
-import react, { useEffect, useState } from 'react';
+import React from 'react';
+import { useTitle } from './useTitle';
 
 const Title = () => {
-
-    const [title, setTitle] = useState( "Valor inicial" );
-
-    useEffect( () => {
-        document.title = title;
-    }, [title] );
+    const title = useTitle( "Começo" );
 
     return (
         <div className="App">
             <form>
-                <input type="text" onChange={( e ) => setTitle( e.target.value )} />
+                <input type="text" value={title.title} onChange={( e ) => title.changeTitle( e.target.value )} />
             </form>
         </div>
     );
