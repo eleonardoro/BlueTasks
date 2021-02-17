@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import MouseMove from './hooks-tests/mouseMove';
 import Title from './hooks-tests/Title';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Title />
+    <MouseMove />
   </React.StrictMode>,
   document.getElementById( 'root' )
 );
