@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Counter from './hooks-tests/Counter';
-import CounterComposed from './hooks-tests/CounterComposed';
-import MouseMove from './hooks-tests/mouseMove';
-import Title from './hooks-tests/Title';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CounterComposed />
+    <App />
   </React.StrictMode>,
   document.getElementById( 'root' )
 );

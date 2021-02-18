@@ -1,72 +1,54 @@
-import React, { Component } from 'react';
+import React, { useContext, useState } from 'react';
 import { Redirect } from 'react-router-dom';
-import AuthService from '../api/AuthService';
+import { AuthContext } from '../hooks/useAuth';
 import Alert from './Alert';
 
-class Login extends Component {
-    constructor( props ) {
-        super( props );
+const Login = () => {
+    const auth = useContext( AuthContext );
+    const [username, setUsername] = useState( "" );
+    const [password, setPassword] = useState( "" );
 
-        this.state = {
-            username: "",
-            password: "",
-            alert: null,
-            processing: false,
-            loggedIn: false
-        };
-
-        this.handleSubmit = this.handleSubmit.bind( this );
-        this.handleInputChanged = this.handleInputChanged.bind( this );
-        this.handleLoginResponse = this.handleLoginResponse.bind( this );
-    }
-
-    handleSubmit( event ) {
+    const handleSubmit = ( event ) => {
         event.preventDefault();
+        auth.login( username, password );
+    };
 
-        this.setState( { processing: true } );
+    if ( auth.isAuthenticated() )
+        return <Redirect to="/" />;
 
-        AuthService.login( this.state.username, this.state.password, this.handleLoginResponse );
-    }
+    return (
+        <div>
+            <h1>Login</h1>
+            {auth.error && <Alert message={auth.error} />}
+            <form onSubmit={handleSubmit}>
+                <div className="form-group">
+                    <label htmlFor="username">Usuário</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        onChange={( event ) => setUsername( event.target.value )}
+                        value={username}
+                        placeholder="Digite o usuário..."
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">Senha</label>
+                    <input
+                        type="password"
+                        className="form-control"
+                        onChange={( event ) => setPassword( event.target.value )}
+                        value={password}
+                        placeholder="Digite a senha..."
+                    />
+                </div>
+                <button
+                    type="submit"
+                    className="btn btn-primary"
+                    disabled={auth.processing}>Login</button>
+            </form>
 
-    handleLoginResponse( success ) {
-        if ( success ) {
-            this.setState( { loggedIn: true, processing: false } );
-            this.props.onLoginSuccess();
-        } else {
-            this.setState( { alert: "Falha no Login!", processing: false } );
-        }
-    }
-
-    handleInputChanged( event ) {
-        const field = event.target.name;
-        const value = event.target.value;
-
-        this.setState( { [field]: value } );
-    }
-
-    render() {
-        if ( AuthService.isAuthenticated() || this.state.loggedIn )
-            return <Redirect to="/" />;
-
-        return (
-            <div>
-                <h1>Login</h1>
-                {this.state.alert !== null ? <Alert message={this.state.alert} /> : ""}
-                <form onSubmit={this.handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="username">Usuário</label>
-                        <input type="text" className="form-control" onChange={this.handleInputChanged} value={this.state.username} name="username" placeholder="Digite o usuário..." />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Senha</label>
-                        <input type="password" className="form-control" onChange={this.handleInputChanged} value={this.state.password} name="password" placeholder="Digite a senha..." />
-                    </div>
-                    <button type="submit" className="btn btn-primary" disabled={this.state.processing}>Login</button>
-                </form>
-
-            </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default Login;
