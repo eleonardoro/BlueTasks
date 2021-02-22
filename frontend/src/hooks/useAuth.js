@@ -11,9 +11,11 @@ export const useAuth = () => {
 
     useEffect( () => {
         loadCredentials();
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [] );
 
-    const login = async ( username, password, onLogin ) => {
+    const login = async ( username, password ) => {
         const loginInfo = { username: username, password: password };
 
         setProcessing( true );
